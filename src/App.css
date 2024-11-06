@@ -1,28 +1,7 @@
 body {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full viewport height */
-  margin: 0; /* Remove default margin */
-}
-.square {
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
-  color: black;
-  border: 1px solid #333;
-  cursor: pointer;
-}
-
-.board-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.status {
-  margin-bottom: 5px;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }

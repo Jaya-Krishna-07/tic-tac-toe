@@ -1,9 +1,7 @@
-import { useState } from "react";
-
-const Square = ({value, onSquareClick}) => {
+const Square = ({ value, onSquareClick }) => {
 
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className="w-14 h-14 text-2xl bg-gray-100 cursor-pointer border border-black-500 border-solid" onClick={onSquareClick}>
       {value}
     </button>
   );
