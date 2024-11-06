@@ -2,20 +2,19 @@ import { useState } from "react";
 import Square from "./Square";
 
 const Board = () => {
+
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
 
-  
-
   const handleClick = (i) => {
+    
     if (squares[i] || calculateWinners(squares)) {
       return;
     }
 
     const nextSquares = squares.slice();
 
-    if (xIsNext) nextSquares[i] = "X";
-    else nextSquares[i] = "O";
+    nextSquares[i] = xIsNext ? 'X' : 'O' ;
 
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
@@ -40,12 +39,10 @@ const Board = () => {
     }
     return null;
   };
-  
-  const winner = calculateWinners(squares);
-  let status;
 
-  if (winner) { status = "Winner: " + winner; }
-  else status = "Next Player: " + (xIsNext ? "X" : "O");
+  const winner = calculateWinners(squares);
+  const status = winner ? `Winner: ${winner}` : `Next Player: ${xIsNext ? 'X' : 'O'}`;
+
   return (
     <>
       <div className="status">{status}</div>
