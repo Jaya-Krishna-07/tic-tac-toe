@@ -46,17 +46,13 @@ const Board = () => {
   return (
     <>
       <h2 className="mb-2.5 text-xl">{status}</h2>
-      <div className="flex gap-2.5 mb-2.5">
+      <div className="grid grid-cols-3 gap-2.5 mb-2.5">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="flex gap-2.5 mb-2.5">
         <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
         <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
         <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="flex gap-2.5 mb-2.5">
         <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
